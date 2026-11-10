@@ -1,0 +1,438 @@
+
+/* SECUREBANK - CORPORATE BANKING DESIGN */
+
+:root {
+    --navy: #092b55;
+    --blue: #0756a3;
+    --accent: #1685df;
+    --light: #f4f7fb;
+    --white: #ffffff;
+    --text: #172b45;
+    --muted: #65758b;
+    --border: #e2e8f0;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--text);
+    background: #edf3fa;
+    line-height: 1.6;
+}
+/* NAVBAR */
+
+header {
+    width: 100%;
+    min-height: 90px;
+    padding: 12px 7%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #ffffff;
+    border-bottom: 3px solid #c5a45d;
+    box-shadow: 0 4px 18px rgba(9, 43, 85, 0.08);
+}
+.brand img {
+    width: 210px;
+    height: 65px;
+    object-fit: contain;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--navy);
+    font-size: 14px;
+    font-weight: 600;
+    transition: 0.2s;
+}
+
+nav a:hover {
+    color: var(--accent);
+}
+
+.nav-login {
+    background: var(--navy);
+    color: white !important;
+    padding: 11px 24px;
+    border-radius: 5px;
+}
+
+/* HERO */
+
+.hero {
+    min-height: 460px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    padding: 65px 9%;
+    background: linear-gradient(
+        120deg,
+        #dceafa,
+        #f2f6fc 65%,
+        #d4e5f7
+    );
+    border-bottom: 1px solid #cfdeef;
+}
+.hero-content {
+    max-width: 550px;
+}
+
+.hero-label {
+    color: var(--blue);
+    font-weight: bold;
+    font-size: 13px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-bottom: 18px;
+}
+
+.hero h1 {
+    color: var(--navy);
+    font-size: clamp(35px, 4.5vw, 54px);
+    line-height: 1.17;
+    margin-bottom: 20px;
+    letter-spacing: -1.5px;
+}
+
+.hero p {
+    color: var(--muted);
+    font-size: 16px;
+    max-width: 470px;
+    margin-bottom: 28px;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 14px;
+    flex-wrap: wrap;
+}
+
+.btn {
+    display: inline-block;
+    padding: 13px 25px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: bold;
+    transition: 0.25s;
+}
+
+.btn-primary {
+    background: var(--navy);
+    color: white;
+}
+
+.btn-secondary {
+    border: 1px solid var(--navy);
+    color: var(--navy);
+    background: white;
+}
+
+.btn:hover {
+    box-shadow: 0 5px 14px rgba(9, 43, 85, 0.12);
+}
+/* HERO VISUAL */
+/* PREMIUM SECUREBANK HERO */
+
+.hero-visual {
+    width: 43%;
+    min-width: 280px;
+    min-height: 340px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+    border-radius: 14px;
+    background: linear-gradient(145deg, #edf4fc, #dce9f7);
+    border: 1px solid #d4e2f1;
+    box-shadow: 0 18px 45px rgba(9, 43, 85, 0.12);
+}
+
+.premium-logo-panel {
+    width: 100%;
+    min-height: 250px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 25px;
+    box-shadow: 0 8px 25px rgba(9, 43, 85, 0.08);
+}
+
+.premium-logo-panel img {
+    width: 100%;
+    max-width: 350px;
+    height: auto;
+    object-fit: contain;
+}
+
+.logo-divider {
+    width: 65px;
+    height: 3px;
+    margin: 15px 0;
+    background: #c5a45d;
+    border-radius: 5px;
+}
+
+.premium-logo-panel p {
+    color: #092b55;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-align: center;
+}
+/* TRUST STRIP */
+
+.trust-strip {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 32px 8%;
+    gap: 20px;
+    background: #092b55;
+    border-bottom: 4px solid #c5a45d;
+}
+
+.trust-item {
+    text-align: center;
+}
+
+.trust-item h3 {
+    color: #ffffff;
+    font-size: 17px;
+}
+
+.trust-item p {
+    color: #cbdcf0;
+    font-size: 13px;
+}
+.trust-item {
+    text-align: center;
+}
+
+.trust-item h3 {
+    color: var(--navy);
+    font-size: 16px;
+}
+
+.trust-item p {
+    color: var(--muted);
+    font-size: 13px;
+}
+
+/* SERVICES */
+
+main {
+    max-width: 1250px;
+    margin: 0 auto;
+    padding: 65px 25px 80px;
+    background: linear-gradient(180deg, #e8f0fa, #f5f8fc);
+}
+.section-heading {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.section-heading h2 {
+    color: var(--navy);
+    font-size: 32px;
+    margin-bottom: 8px;
+}
+
+.section-heading p {
+    color: var(--muted);
+    font-size: 14px;
+}
+
+.card {
+    padding: 32px;
+    background: #ffffff;
+    border: 1px solid #d5e1ef;
+    border-top: 4px solid #0756a3;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(9, 43, 85, 0.09);
+    transition: transform .25s, box-shadow .25s;
+}
+/* SERVICE CARDS */
+
+/* PREMIUM SERVICE CARDS */
+
+.card {
+    padding: 32px;
+    background: #ffffff;
+    border: 1px solid #dce5ef;
+    border-top: 4px solid #0756a3;
+    border-radius: 12px;
+    box-shadow: 0 8px 28px rgba(9, 43, 85, 0.07);
+    transition: transform .25s, box-shadow .25s;
+}
+
+.card:hover {
+    box-shadow: 0 16px 35px rgba(9, 43, 85, 0.13);
+}
+.card-icon {
+    width: 54px;
+    height: 54px;
+    display: grid;
+    place-items: center;
+    background: linear-gradient(135deg, #092b55, #0756a3);
+    color: #ffffff;
+    font-size: 24px;
+    border-radius: 12px;
+    margin-bottom: 20px;
+    box-shadow: 0 5px 14px rgba(7, 86, 163, 0.22);
+}
+.card h3 {
+    color: #092b55;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.card p {
+    color: #64748b;
+    font-size: 14px;
+    line-height: 1.7;
+    margin-bottom: 22px;
+}
+
+/* PREMIUM FORMS */
+
+label {
+    display: block;
+    font-size: 13px;
+    font-weight: 600;
+    margin-bottom: 7px;
+    color: #243b53;
+}
+
+input, select {
+    width: 100%;
+    padding: 14px;
+    margin-bottom: 18px;
+    background: #f7f9fc;
+    border: 1px solid #d5dfeb;
+    border-radius: 7px;
+    font-size: 14px;
+    outline: none;
+    transition: .2s;
+}
+
+input:focus, select:focus {
+    background: #ffffff;
+    border-color: #0756a3;
+    box-shadow: 0 0 0 3px rgba(7, 86, 163, .12);
+}
+
+/* PREMIUM BUTTONS */
+
+button {
+    width: 100%;
+    padding: 14px;
+    background: linear-gradient(110deg, #092b55, #0756a3);
+    color: #ffffff;
+    border: 1px solid #0756a3;
+    border-radius: 7px;
+    font-weight: 600;
+    font-size: 14px;
+    cursor: pointer;
+    transition: .25s;
+    box-shadow: 0 5px 14px rgba(9, 43, 85, 0.16);
+}
+
+button:hover {
+    background: linear-gradient(110deg, #0756a3, #1685df);
+    box-shadow: 0 7px 18px rgba(7, 86, 163, 0.25);
+    transform: translateY(-2px);
+}
+
+/* PREMIUM FOOTER */
+
+footer {
+    background: linear-gradient(120deg, #061a35, #092b55, #0d4075);
+    color: #ffffff;
+    padding: 50px 20px;
+    text-align: center;
+   border-top: 4px solid #0756a3;
+}
+
+footer p {
+    font-size: 13px;
+    margin: 7px;
+    color: #d5e2f1;
+}
+/* RESPONSIVE */
+
+@media(max-width: 900px) {
+    .hero {
+        padding: 50px 6%;
+    }
+
+    .cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .hero-visual {
+        min-width: 220px;
+    }
+}
+
+@media(max-width: 650px) {
+    header {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .brand img {
+        width: 175px;
+    }
+
+    nav {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .hero {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-buttons {
+        justify-content: center;
+    }
+
+    .hero-visual {
+        width: 100%;
+        min-height: 220px;
+    }
+
+    .trust-strip {
+        grid-template-columns: 1fr;
+    }
+
+    .cards {
+        grid-template-columns: 1fr;
+    }
+
+    main {
+        margin: 45px auto;
+    }
+}
+```

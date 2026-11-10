@@ -1,0 +1,33 @@
+# Customer and transaction data
+accounts.dat
+transactions.dat
+transactions.dat.backup
+securebank.db
+
+# Compiled programs
+bank_server*
+server
+migrate
+check_sizes
+
+# Backup files and folders
+backup/
+*.tar.gz
+*.backup
+
+# Logs
+*.log
+
+# Exclude old backend and website files
+c_backend/*
+html/*
+
+# Allow only active project files
+!c_backend/server.c
+!c_backend/bank.c
+!c_backend/bank.h
+
+!html/index.html
+!html/style.css
+!html/securebank-logo.jpg
+check_sizes.c

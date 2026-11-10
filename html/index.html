@@ -1,0 +1,294 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>SecureBank | Your Security. Our Priority.</title>
+
+<link rel="stylesheet" href="/style.css">
+
+</head>
+
+<body>
+
+<!-- NAVIGATION -->
+
+<header>
+
+    <div class="brand">
+        <img src="/securebank-logo.jpg" alt="SecureBank Logo">
+    </div>
+
+    <nav>
+        <a href="/">Home</a>
+        <a href="#services">Personal Banking</a>
+        <a href="#about">About Us</a>
+        <a href="#contact">Contact</a>
+        <a href="#services" class="nav-login">Login</a>
+    </nav>
+
+</header>
+
+
+<!-- HERO SECTION -->
+
+<section class="hero">
+
+    <div class="hero-content">
+
+        <div class="hero-label">
+            YOUR SECURITY. OUR PRIORITY.
+        </div>
+
+        <h1>
+            Banking built<br>
+            around your future.
+        </h1>
+
+        <p>
+            Experience simple, secure and convenient
+            digital banking with SecureBank.
+            Manage your money with confidence.
+        </p>
+
+        <div class="hero-buttons">
+
+            <a href="#create-account" class="btn btn-primary">
+                Open an Account →
+            </a>
+
+            <a href="#customer-login" class="btn btn-secondary">
+                Customer Login
+            </a>
+
+        </div>
+
+    </div>
+
+<div class="hero-visual">
+    <div class="premium-logo-panel">
+        <img src="/securebank-logo.jpg" alt="SecureBank - Your Security. Our Priority.">
+        <div class="logo-divider"></div>
+        <p>YOUR SECURITY. OUR PRIORITY.</p>
+    </div>
+</div>
+
+</section>
+
+
+<!-- TRUST SECTION -->
+
+<section class="trust-strip" id="about">
+
+    <div class="trust-item">
+        <h3>🔒 Secure Banking</h3>
+        <p>Security-focused account management</p>
+    </div>
+
+    <div class="trust-item">
+        <h3>⚡ Simple Banking</h3>
+        <p>Convenient account operations</p>
+    </div>
+
+    <div class="trust-item">
+        <h3>✓ Reliable Access</h3>
+        <p>Easy access to your banking services</p>
+    </div>
+
+</section>
+
+
+<!-- BANKING SERVICES -->
+
+<main id="services">
+
+    <div class="section-heading">
+
+        <h2>Banking Services</h2>
+
+        <p>
+            Manage your banking activities through
+            our simple digital platform.
+        </p>
+
+    </div>
+
+
+    <div class="cards">
+
+
+        <!-- CREATE ACCOUNT -->
+
+        <div class="card" id="create-account">
+
+            <div class="card-icon">♙</div>
+
+            <h3>Open a Bank Account</h3>
+
+            <p>
+                Get started with SecureBank.
+                Create your personal banking account.
+            </p>
+
+            <form action="/create" method="POST">
+
+                <label>Customer Name</label>
+
+                <input
+                    name="name"
+                    type="text"
+                    placeholder="Enter full name"
+                    required
+                >
+
+                <label>Mobile Number</label>
+
+                <input
+                    name="mobile"
+                    type="tel"
+                    maxlength="10"
+                    placeholder="Enter mobile number"
+                    required
+                >
+
+                <label>Account Type</label>
+
+                <select name="type">
+                    <option value="Savings">Savings Account</option>
+                    <option value="Current">Current Account</option>
+                </select>
+
+                <label>Password</label>
+
+                <input
+                    name="password"
+                    type="password"
+                    placeholder="Create password"
+                    required
+                >
+
+                <label>Initial Deposit (₹)</label>
+
+                <input
+                    name="opening_balance"
+                    type="number"
+                    min="0"
+                    step="0.01"
+                    placeholder="Enter amount"
+                    required
+                >
+
+                <button type="submit">
+                    Create Account →
+                </button>
+
+            </form>
+
+        </div>
+
+
+        <!-- CUSTOMER LOGIN -->
+
+        <div class="card" id="customer-login">
+
+            <div class="card-icon">♙</div>
+
+            <h3>Customer Banking</h3>
+
+            <p>
+                Sign in to access your account
+                and manage your banking activities.
+            </p>
+
+            <form action="/login" method="POST">
+
+                <label>Account Number</label>
+
+                <input
+                    name="account_no"
+                    type="number"
+                    placeholder="Enter account number"
+                    required
+                >
+
+                <label>Password</label>
+
+                <input
+                    name="password"
+                    type="password"
+                    placeholder="Enter password"
+                    required
+                >
+
+                <button type="submit">
+                    Customer Login →
+                </button>
+
+            </form>
+
+        </div>
+
+
+        <!-- ADMIN LOGIN -->
+
+        <div class="card" id="admin-login">
+
+            <div class="card-icon">♙</div>
+
+            <h3>Administrator Portal</h3>
+
+            <p>
+                Authorized access for SecureBank
+                administrators.
+            </p>
+
+            <form action="/admin-login" method="POST">
+
+                <label>Admin Username</label>
+
+                <input
+                    name="username"
+                    type="text"
+                    placeholder="Enter username"
+                    required
+                >
+
+                <label>Admin Password</label>
+
+                <input
+                    name="password"
+                    type="password"
+                    placeholder="Enter password"
+                    required
+                >
+
+                <button type="submit">
+                    Administrator Login →
+                </button>
+
+            </form>
+
+        </div>
+
+    </div>
+
+</main>
+
+
+<!-- FOOTER -->
+
+<footer id="contact">
+
+    <p>© 2026 SecureBank. All rights reserved.</p>
+
+    <p>Your Security. Our Priority.</p>
+
+    <p>Academic CSE Project</p>
+
+</footer>
+
+</body>
+</html>
+```
