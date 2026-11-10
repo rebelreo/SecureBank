@@ -12,7 +12,7 @@
 #include <arpa/inet.h>
 #include "bank.h"
 
-#define PORT 8080
+#define DEFAULT_PORT 8080
 #define BUFFER_SIZE 16384
 #define MAX_SESSIONS 100
 #define SESSION_TIMEOUT 1800
@@ -1658,6 +1658,13 @@ int main(void) {
     int server_fd, client;
     int option = 1;
 
+    const char *port_env = getenv("PORT");
+    int port = port_env ? atoi(port_env) : DEFAULT_PORT;
+
+    if (port <= 0 || port > 65535) {
+        fprintf(stderr, "Invalid PORT environment variable\n");
+        return 1;
+    }
     struct sockaddr_in address;
 
     server_fd = socket(AF_INET, SOCK_STREAM, 0);
@@ -1672,9 +1679,8 @@ int main(void) {
 
     memset(&address, 0, sizeof(address));
     address.sin_family = AF_INET;
-    address.sin_addr.s_addr = htonl(INADDR_LOOPBACK);
-    address.sin_port = htons(PORT);
-
+    address.sin_addr.s_addr = htonl(INADDR_ANY);
+    address.sin_port = htons(port);
     if (bind(server_fd, (struct sockaddr *)&address,
              sizeof(address)) < 0) {
         perror("Bind failed");
@@ -1688,9 +1694,7 @@ int main(void) {
         return 1;
     }
 
-    printf("SecureBank C Server started!\n");
-    printf("Open http://127.0.0.1:%d\n", PORT);
-
+   printf("SecureBank C Server started on port %d\n", port);
     while (1) {
         client = accept(server_fd, NULL, NULL);
 
